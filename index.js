@@ -25,5 +25,5 @@ app.get("/", async function(req, res){
     res.send(answer.rows[0]);
 })
 
-app.use("/.well-known/pki-validation/", express.static(path.join(__dirname, '/sslcheck')))
+app.use("/.well-known/pki-validation/", express.static(path.join(__dirname, '/sslcheck')));
 server.listen(PORT, console.log(`Listening on port ${PORT}.`));
