@@ -1,17 +1,11 @@
 //Server Dependencies
 const fs = require("fs");
 const express = require("express");
-const http/*s*/ = require(/*"https"*/"http");
+const http = require("http");
 const app = express();
 
 //Server Configuration
-/*
-var privateKey  = fs.readFileSync('certs/private.key', 'utf8');
-var certificate = fs.readFileSync('certs/certificate.crt', 'utf8');
-var cacert = fs.readFileSync('certs/ca_bundle.crt', 'utf8');
-var credentials = { key: privateKey, cert: certificate, ca: cacert };
-*/
-const server = http/*s*/.createServer(/*credentials, */app);
+const server = http.createServer(app);
 const io = require("socket.io")(server);
 const PORT = 8080;;
 
