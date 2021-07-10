@@ -1,0 +1,25 @@
+{
+  "name": "whitesky",
+  "version": "0.0.1",
+  "description": "Scheduling service.",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/project-white-sky/main.git"
+  },
+  "keywords": [
+    "schedule",
+    "kids",
+    "education",
+    "timemanagement"
+  ],
+  "author": "Kenji, Keizou, and Kierra Wang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/project-white-sky/main/issues"
+  },
+  "homepage": "https://github.com/project-white-sky/main#readme"
+}
