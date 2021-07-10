@@ -14,7 +14,7 @@ const path = require("path");
 const { Pool } = require("pg");
 const pool = new Pool({
     host: "localhost",
-    user: "postgres",
+    user: "whitesky",
     database: "whitesky",
     password: "postgres",
     port: 5432
