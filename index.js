@@ -1,11 +1,19 @@
-//Server Setup
+//Server Dependencies
+const fs = require("fs");
 const express = require("express");
-const http = require("http");
+const http/*s*/ = require(/*"https"*/"http");
 const app = express();
-const server = http.createServer(app);
 
-//Other Server Configurations
-const PORT = 8080;
+//Server Configuration
+/*
+var privateKey  = fs.readFileSync('certs/private.key', 'utf8');
+var certificate = fs.readFileSync('certs/certificate.crt', 'utf8');
+var cacert = fs.readFileSync('certs/ca_bundle.crt', 'utf8');
+var credentials = { key: privateKey, cert: certificate, ca: cacert };
+*/
+const server = http/*s*/.createServer(/*credentials, */app);
+const io = require("socket.io")(server);
+const PORT = 8080;;
 
 //Other Dependencies
 const path = require("path");
@@ -14,7 +22,7 @@ const path = require("path");
 const { Pool } = require("pg");
 const pool = new Pool({
     host: "localhost",
-    user: "whitesky",
+    user: "postgres",
     database: "whitesky",
     password: "postgres",
     port: 5432
@@ -25,5 +33,4 @@ app.get("/", async function(req, res){
     res.send(answer.rows[0]);
 })
 
-app.use("/.well-known/pki-validation/", express.static(path.join(__dirname, '/sslcheck')));
 server.listen(PORT, console.log(`Listening on port ${PORT}.`));
