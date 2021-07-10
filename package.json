@@ -4,11 +4,11 @@
   "description": "Scheduling service.",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon index.js"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/project-white-sky/main.git"
+    "url": "git+https://github.com/project-white-sky/main"
   },
   "keywords": [
     "schedule",
@@ -21,5 +21,13 @@
   "bugs": {
     "url": "https://github.com/project-white-sky/main/issues"
   },
-  "homepage": "https://github.com/project-white-sky/main#readme"
+  "homepage": "https://github.com/project-white-sky/main#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "nodemon": "^2.0.11",
+    "object-hash": "^2.2.0",
+    "pg": "^8.6.0",
+    "socket.io": "^4.1.2"
+  }
 }
