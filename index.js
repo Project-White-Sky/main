@@ -253,7 +253,7 @@ io.on("connection", function(socket) {
                 }
                 console.log(3)
                 console.log("price: "+price.rows[0].price)
-                if (price.rows[0].price >= coins.rows[0].skycoin) {
+                if (price.rows[0].price > coins.rows[0].skycoin) {
                     callback([false, "Not enough money"])
                 } else {
                     console.log(4)
