@@ -1,0 +1,371 @@
+:root{
+    --maincolor: rgb(245, 141, 66);
+    --secondarycolor: rgb(255, 172, 112);
+}
+@font-face {
+    font-family: logo;
+    src: url(/static/fonts/logo.ttf);
+}
+@font-face {
+    font-family: title;
+    src: url(/static/fonts/body.ttf);
+    font-weight: 900;
+}
+@font-face {
+    font-family: body;
+    src: url(/static/fonts/body.ttf);
+    font-weight: 700;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+input{
+    border: none;
+    color:white;
+    border-bottom: solid 0.5vh white;
+    background:none;
+    outline:none;
+    font-family:body;
+    font-size:2.5vh;
+    padding:2vh;
+    padding-left:0vh;
+    margin:0px;
+    transition:0.4s;
+    width: 80%;
+    box-shadow: none;
+}
+input::placeholder{
+    color:white;
+}
+button{
+    outline:none;
+    border-radius:2vh;
+    font-family:body;
+    border:none;
+    color:white;
+    background:var(--secondarycolor);
+    padding:2vh;
+    font-size:2.5vh;
+    border:1vh;
+    cursor:pointer;
+    transition:0.5s;
+}
+button:hover{
+    background:rgb(255, 184, 133);
+}
+a{
+    color:black;
+    text-decoration:none;
+}
+h1,label{
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    line-height: 1.5;
+    font-size: 5vh;
+    font-family: title;
+}
+h1.huge{
+    font-size: 7.5vh;
+}
+h1.massive{
+   font-size: 12vh;
+}
+h2{
+    font-family: title;
+    font-size: 3vh;
+}
+h3,h4,h5,h6,p,pre{
+    font-family: body;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+h1,h2,h3,h4,h5,h6 {
+    padding: 0px;
+    margin: 0px;
+}
+h3 {
+    font-size: 2.5vh;
+}
+h4{
+    font-size: 2vh;
+}
+h5{
+    font-size: 1.8vh;
+}
+h6{
+    font-size: 1.4vh;
+}
+html,body{
+    padding:0px;
+    margin:0px;
+}
+.block{
+    display:block;
+}
+.nospace{
+    padding:0px;
+    margin:0px;
+}
+.centercontent{
+    text-align:center;
+}
+.centered{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+header{
+    position:relative;
+    display:block;
+    height:12vh;
+    width:100vw;
+    background: var(--maincolor);
+    color:white
+}
+fullpage{
+    display:block;
+    position:relative;
+    height:100vh;
+    width:100vw;
+}
+.hidden{
+    display:none;
+}
+.thidden{
+    display:hidden;
+}
+.logupdiv{
+    top:50%;
+    left:50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: 75%;
+    background: var(--maincolor);
+    color: white;
+}
+#loginsection{
+    position: absolute;
+    left: 0px;
+    top:0px;
+    height: 100%;
+    width: 50%;
+}
+table{
+    background: var(--secondarycolor);
+    padding:0px;
+    border:none;
+    border-collapse:collapse;
+    margin:0px;
+}
+tr{
+    flex: 1;
+}
+th{
+    font-size:2.5vh;
+    font-family:title;
+    padding:2vh;
+}
+th,td{
+    color:white;
+    border: solid white 0.5vh;
+}
+td{
+    text-align:left;
+    padding:1.5vh;
+    font-size:2.5vh;
+    font-family:body;
+    position:relative;
+    flex-grow: 0;
+    flex:0;
+    flex-shrink:0;
+    word-wrap: break-word;
+    overflow:hidden;
+}
+tbody{
+    display:block;
+    width:100%;
+}
+td input[type=checkbox]{
+    opacity:0.5;
+    padding:0px;
+    margin:0px;
+    height:4vh;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    transition:0s;
+}
+td input[type=checkbox]:checked{
+    opacity:1;
+    transition:0s;
+}
+td:focus {
+    outline: none;
+}
+td:hover {
+    background-color: var(--maincolor);
+    cursor: text;
+}
+.pointer{
+    cursor:pointer;
+}
+.achievementsbackdrop{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000000;
+    background:rgba(0,0,0,0.5);
+    backdrop-filter:blur(1.5vh);
+    pointer-events:none;
+    opacity:0;
+    transition:1s;
+}
+textarea#achievementstrigger:valid ~ .achievementsbackdrop{
+    pointer-events:auto;
+    opacity:1;
+}
+#confettilauncher{
+    opacity:0;
+    pointer-events:none;
+    transition:1s;
+    position:absolute;
+    top:0%;
+    left:50%;
+    transform:translateX(-50%);
+    height:100vh;
+}
+textarea#achievementstrigger:valid ~ .achievementsbackdrop #confettilauncher{
+    opacity:1;
+}
+x{
+    padding:0px;
+    margin:0px;
+    cursor:pointer;
+    color:white;
+    font-family:title;
+    font-size:3vh;
+    position:absolute;
+    top:2vh;
+    right:2vh;
+}
+#dragonimage{
+    flex-shrink:0;
+    display:block;
+    width:48vw;
+    height:calc(112vw / 3);
+    border:none;
+    outline:none;
+}
+.dinocard {
+    padding:0px;
+    margin:0px;
+    position:relative;
+    top:50%;
+    transform:translateY(-50%);
+    flex-shrink:0;
+    background:var(--secondarycolor);
+    display:block;
+    height:70vh;
+    width:30vw;
+}
+.dinocard h1{
+    color:white;
+}
+.fulldiv {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+circle{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    width: 8vh;
+    height: 8vh;
+    cursor:pointer;
+}
+circle svg{
+    color:white;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+select{
+    font-size:6vh;
+    background:rgba(0,0,0,0);
+    border:none;
+    font-family:body;
+    outline:none;
+}
+cosmeticscard{
+    display:inline-block;
+    height:calc(105vw / 13.5);
+    width: 20vw;
+    margin:1.75vw;
+    background:var(--maincolor);
+}
+shopcard {
+    position: relative;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    margin: 1vh;
+    width: calc(50% - 3vh);
+    height: calc(100vh * 7 / 18);
+    background: var(--secondarycolor);
+    border-radius: 1vw;
+}
+shopcard imghitbox {
+    position: relative;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    margin: 0px;
+    padding: 0px;
+}
+shopcard img {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    margin: 0px;
+    padding: 0px;
+}
+shopcard div {
+    position: absolute;
+    right: 5%;
+    height: 100%;
+    width: 45%;
+    margin: 0px;
+    top: 65%;
+    transform: translateY(-50%);
+    padding: 0px;
+    color: white;
+}
+shopcard button {
+    background-color: var(--maincolor);
+    width: 50%;
+    border: 0.5vh solid white;
+}
+.coincounter{
+    display:inline-block;
+}
+.coincounter img{
+    display:inline-block;
+}
+.cosmeticimage{
+    flex-shrink:0;
+    display:block;
+    width:48vw;
+    height:calc(112vw / 3);
+    border:none;
+    outline:none;
+    position:absolute;
+}

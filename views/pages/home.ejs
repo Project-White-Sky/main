@@ -1,0 +1,41 @@
+<%- include('../partials/head') %>
+    <%- include('../partials/header') %>
+    <h1>Home</h1>
+    <fullpage id="logupbackdrop" style="backdrop-filter: blur(2vh);background:rgba(255,255,255,0.25); top:0%;left:0%;position:fixed;z-index:1000000;pointer-events:none;display:none;">
+        <div class="centered nospace block logupdiv">
+            <div class="nospace" id="loginsection">
+                <div class="nospace centered centercontent" style="width:80%;">
+                    <h1 class="nospace">Login</h1>
+                    <br>
+                    <input type="email" placeholder="Email or Username" style="width:calc(100% - 4vh);">
+                    <br>
+                    <br>
+                    <input type="password" placeholder="Password" style="width:calc(100% - 4vh);">
+                    <br>
+                    <br>
+                    <br>
+                    <button id="loginbutton" style="width:100%;">Submit</button>
+                </div>
+            </div>
+            <div style="position: absolute; background-color: white; height: 90%; width: 0.75vh; left: 50%; top: 50%; transform: translate(-50%, -50%);"></div>
+            <div class="nospace" style="position: absolute; right: 0px; height: 100%; width: 50%; outline: none;" id="signupsection">
+                <div class="nospace centered centercontent" style="width:80%;">
+                    <h1>Signup</h1>
+                    <br>
+                    <input type="username" placeholder="Username" style="width:calc(100% - 4vh);">
+                    <br>
+                    <br>
+                    <input type="email" placeholder="Email" style="width:calc(100% - 4vh);">
+                    <br>
+                    <br>
+                    <input type="password" placeholder="Password" style="width:calc(100% - 4vh);">
+                    <br>
+                    <br>
+                    <br>
+                    <button id="signupbutton" style="width:100%;">Submit</button>
+                </div>
+            </div>
+        </div>
+    </fullpage>
+    <script src="/static/js/home.js"></script>
+<%- include('../partials/feet') %>

@@ -1,0 +1,40 @@
+<%- include('../partials/head') %>
+    <%- include('../partials/header') %>
+    <div style="margin:2vw;width:96vw;padding:0vh;" class="block">
+        <h2 id="welcomemsg" style="font-size:4vh; display: block;"></h2>
+        <br>
+        <table>
+            <tr id="ignoremesche">
+                <th style="width:20vh; max-width: 24vh;">Time</th>
+                <th style="width: calc((96vw - 30vh) * 5 / 8); max-width: calc((96vw - 34vh) * 5 / 8);">Activity</th>
+                <th style="width: calc((96vw - 30vh ) * 3 / 8); max-width: calc((96vw - 34vh) * 5 / 8);">Goal of the day</th>
+                <th style="width:10vh;max-width:14vh;">Done?</th>
+            </tr>
+        </table>
+        <button style="width:96vw;border-radius:0;border:solid white 0.5vh;border-top: none;" id="addcolumn">Add Column</button>
+        <br><br><br>
+        <div class="nospace" style="display:flex;width:100%;">
+            <img id="dragonimage">
+            <img class="cosmeticimage" style="position:absolute;" id="hat">
+            <img class="cosmeticimage" style="position:absolute;" id="face">
+            <img class="cosmeticimage" style="position:absolute;" id="shirt">
+            <img class="cosmeticimage" style="position:absolute;" id="shoes">
+            <div class="nospace" styler="display:block;width:48vw;flex-shrink:0;" id="dinoinformation">
+                <select id="dinotype">
+                </select>
+                <a href="/shop"><h2>Go To Shop &rarr;</h2></a>
+            </div>
+        </div>
+    </div>
+    <textarea id="achievementstrigger" style="display:none;" required></textarea>
+    <fullpage class="achievementsbackdrop">
+        <x>x</x>
+        <img src="/static/images/confetti.gif" id="confettilauncher">
+        <div style="z-index:2000000;border-radius:2vh;background:rgba(0,0,0,0.25);backdrop-filter:blur(2vh);padding:5vw;" class="centered centercontent nospace">
+            <img id="achievementbadgemain" style="height:33vh;">
+            <h1 style="color:white;">Achievement Unlocked!</h1>
+            <h2 style="color:white;" id="achievementname"></h2>
+        </div>
+    </fullpage>
+    <script src="/static/js/hub.js"></script>
+<%- include('../partials/feet') %>
